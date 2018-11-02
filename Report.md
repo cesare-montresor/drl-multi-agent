@@ -20,9 +20,7 @@ From my observation sometimes happen that the agent has some difficulties in the
 
 ![Scores][scores]
 
-
-
-## Ideas for Future Work
+## Ideas for Future Work
 
 - Layer noise instead of action noise
 - Several of the improvements coming from PPO: Gradient clipping, credit assignment and reward normalization.
