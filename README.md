@@ -22,20 +22,42 @@ The task is episodic, and in order to solve the environment, your agents must ge
 
 The environment is considered solved, when the average (over 100 episodes) of those **scores** is at least +0.5.
 
+
 ### Getting Started
 
-1. Download the environment from one of the links below.  You need only select the environment that matches your operating system:
+1. Clone this repo   
+```git clone https://github.com/cesare-montresor/drl-multi-agent.git```
+
+2. In the repo is provided a copy on the Tennis for OSX, in case you have a different OS, download the environment from one of the links below:
+
     - Linux: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P3/Tennis/Tennis_Linux.zip)
     - Mac OSX: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P3/Tennis/Tennis.app.zip)
     - Windows (32-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P3/Tennis/Tennis_Windows_x86.zip)
     - Windows (64-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P3/Tennis/Tennis_Windows_x86_64.zip)
     
-    (_For Windows users_) Check out [this link](https://support.microsoft.com/en-us/help/827218/how-to-determine-whether-a-computer-is-running-a-32-bit-version-or-64) if you need help with determining if your computer is running a 32-bit version or 64-bit version of the Windows operating system.
+3. Setup your environment
 
-    (_For AWS_) If you'd like to train the agent on AWS (and have not [enabled a virtual screen](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Training-on-Amazon-Web-Service.md)), then please use [this link](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P3/Tennis/Tennis_Linux_NoVis.zip) to obtain the "headless" version of the environment.  You will **not** be able to watch the agent without enabling a virtual screen, but you will be able to train the agent.  (_To watch the agent, you should follow the instructions to [enable a virtual screen](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Training-on-Amazon-Web-Service.md), and then download the environment for the **Linux** operating system above._)
+   ```
+   conda create --name multi_agent python=3.6
+   source activate multi_agent
+   conda install -c pytorch jupyter
+   pip install unityagents
+   ```
 
-2. Place the file in the DRLND GitHub repository, in the `p3_collab-compet/` folder, and unzip (or decompress) the file. 
+4. Run
 
-### Instructions
-
-Follow the instructions in `DDPG.ipynb` to get started with training your own agent!  
+   *From the main project folder*
+   ```
+   source activate continuous_control
+   jupyter notebooks
+   ```
+   
+   Open and Run:   
+   - Standard DDPG
+   ```DDPG-agent.ipynb```
+   
+   - Standard DDPG with PRE
+   ```DDPG-agent-pre.ipynb```
+   
+   - Multi Agent DDPG with PRE
+   ```MADDPG-agent-pre.ipynb```
